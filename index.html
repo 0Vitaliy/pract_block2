@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="js/script.js">
+</head>
+<body>
+	<div class="contacts">
+	  
+		    <div id="map">
+				
+			</div>
+			<div class="forma">
+		         <div class="cont">
+		         	<h2>КОНТАКТНА ІНФОРМАЦІЯ</h2>
+		            <p>Адреса:01601,м.Київ, вул. Пирогова, 9</p>
+	                <p>Телефон: (044) 234-11-08</p>
+	                <p>E-mail:rector@npu.edu.ua,shef-npu@ukr.net</p>
+			   	</div>
+				   	<form>
+					    <input name="name" placeholder="Name" class="name" required /></br>
+					    <input name="emailaddress" placeholder="Email" class="email" type="email" required /></br>
+					    <textarea rows="4" cols="50" name="subject" placeholder="Введіть ваше повідомлення:" class="message" required></textarea></br>
+					    <input name="submit" class="btn" type="submit" value="Відправити" />
+	                 </form>
+		   </div>
+   </div>
+
+	<script>
+      function initMap() {
+        var uluru = {lat: 50.444877, lng: 30.5058828};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMvRailJqJzzNjrKrfFO9jqTWfcO-e4u0&callback=initMap"
+  async defer>
+</script>
+</body>
+</html>
